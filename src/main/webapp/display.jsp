@@ -1,5 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,21 +9,22 @@
 <h1>Employee List</h1>
 <table border="1">
     <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Department</th>
-        <th>Position</th>
+        <th>nom</th>
+        <th>email</th>
+        <th>telephone</th>
+        <th>departement</th>
+        <th>poste</th>
     </tr>
+
     <c:forEach var="employee" items="${employeList}">
         <tr>
-            <td>${employee.nom}</td>
-            <td>${employee.email}</td>
-            <td>${employee.telephone}</td>
-            <td>${employee.departement}</td>
-            <td>${employee.poste}</td>
+            <td>${employee.getNom()}</td>
+            <td>${employee.getEmail()}</td>
+            <td>${employee.getTelephone()}</td>
+            <td>${employee.getDepartement()}</td>
+            <td>${employee.getPoste()}</td>
         </tr>
     </c:forEach>
 </table>
 </body>
-
+</html>

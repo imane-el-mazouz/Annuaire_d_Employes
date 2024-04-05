@@ -9,7 +9,7 @@
 <body>
 <h1>Gestion des Employés</h1>
 
-<!-- Formulaire pour ajouter un employé -->
+<!-- ADD an employee -->
 <form action="addEmploye.jsp" method="post">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required><br>
@@ -24,14 +24,15 @@
     <input type="submit" value="Ajouter Employé">
 </form>
 
-<!-- Formulaire pour supprimer un employé -->
+<!-- Delete an employee -->
 <form action="deleteEmploye.jsp" method="post">
     <label for="deleteEmail">Supprimer un employé (email) :</label>
     <input type="email" id="deleteEmail" name="deleteEmail" required><br>
     <input type="submit" value="Supprimer Employé">
 </form>
 
-<!-- Formulaire pour mettre à jour un employé -->
+<!-- <!-- Update an employee -->
+
 <form action="updateEmploye.jsp" method="post">
     <label for="updateEmail">Mettre à jour un employé (email) :</label>
     <input type="email" id="updateEmail" name="updateEmail" required><br>
@@ -39,16 +40,15 @@
     <input type="submit" value="Mettre à jour Employé">
 </form>
 
-<!-- Liste des employés -->
+<!--list of employees -->
 <table border="1">
     <tr>
-        <th>Nom</th>
-        <th>Email</th>
-        <th>Téléphone</th>
-        <th>Département</th>
-        <th>Poste</th>
+        <th>nom</th>
+        <th>email</th>
+        <th>telephone</th>
+        <th>departement</th>
+        <th>poste</th>
     </tr>
-    <!-- Vous pouvez remplir cette table dynamiquement à partir des données récupérées côté serveur -->
 </table>
 
 </body>
