@@ -1,6 +1,6 @@
 
 
-/*import java.io.IOException;
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +35,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @WebServlet("/ServletTest")
-public class ServletTest extends HttpServlet {
+public class ServleTest extends HttpServlet {
     private EmployeDAO employeDAO;
 
     public void init() throws ServletException {
