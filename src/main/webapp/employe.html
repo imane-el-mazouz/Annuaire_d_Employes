@@ -10,7 +10,7 @@
 <h1>Gestion des Employés</h1>
 
 <!-- ADD an employee -->
-<form action="addEmploye.jsp" method="post">
+<form action="ServletTest?action=add" method="post">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required><br>
     <label for="email">Email :</label>
@@ -25,17 +25,16 @@
 </form>
 
 <!-- Delete an employee -->
-<form action="deleteEmploye.jsp" method="post">
+<form action="ServletTest?action=delete" method="post">
     <label for="deleteEmail">Supprimer un employé (email) :</label>
-    <input type="email" id="deleteEmail" name="deleteEmail" required><br>
+    <input type="email" id="deleteEmail" name="email" required><br>
     <input type="submit" value="Supprimer Employé">
 </form>
 
-<!-- <!-- Update an employee -->
-
-<form action="updateEmploye.jsp" method="post">
+<!-- Update an employee -->
+<form action="ServletTest?action=update" method="post">
     <label for="updateEmail">Mettre à jour un employé (email) :</label>
-    <input type="email" id="updateEmail" name="updateEmail" required><br>
+    <input type="email" id="updateEmail" name="email" required><br>
     <!-- Other input fields for updating employee information -->
     <input type="submit" value="Mettre à jour Employé">
 </form>
@@ -49,6 +48,7 @@
         <th>departement</th>
         <th>poste</th>
     </tr>
+    <%-- JSP code to display employee list --%>
 </table>
 
 </body>

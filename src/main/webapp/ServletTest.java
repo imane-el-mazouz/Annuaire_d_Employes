@@ -65,6 +65,7 @@ public class ServletTest extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Employe> employes = employeDAO.getAllEmployees();
+
         Employe employee1 = new Employe("chaimaa","chaimaa@gmail.com","060908776","informatique","ingenieure");
         Employe employee2 = new Employe("inas","inas@gmail.com","060908446","Physique","technicienne");
         Employe employee3 = new Employe("alae","alaa@gmail.com","060922776","Chimie","doctorante");
@@ -72,7 +73,6 @@ public class ServletTest extends HttpServlet {
         employes.add(employee1);
         employes.add(employee2);
         employes.add(employee3);
-
 
         request.setAttribute("employeList", employes);
         request.getRequestDispatcher("employeeList.jsp").forward(request, response);
@@ -88,20 +88,15 @@ public class ServletTest extends HttpServlet {
 
         Employe employe = new Employe(nom, email, telephone, departement, poste);
         employeDAO.addEmployee(employe);
-        response.sendRedirect("addConfirmation.jsp");
     }
 
     private void updateEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
-
+        // Implémentez la mise à jour de l'employé ici
     }
 
     private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         employeDAO.deleteEmployee(email);
-        response.sendRedirect("deleteConfirmation.jsp");
     }
 }
-
-
-

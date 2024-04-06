@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeDAO {
@@ -50,3 +50,63 @@ public class EmployeDAO {
         return new ArrayList<>(employes);
     }
 }
+*/
+package test;
+
+//
+//Source code recreated from a .class file by IntelliJ IDEA
+//(powered by FernFlower decompiler)
+//
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class EmployeDAO {
+    private List<Employe> employes = new ArrayList();
+
+    public EmployeDAO() {
+    }
+
+    public void addEmployee(Employe employe) {
+        this.employes.add(employe);
+    }
+
+    public void updateEmployee(String email, Employe updatedEmploye) {
+        for(int i = 0; i < this.employes.size(); ++i) {
+            if (((Employe)this.employes.get(i)).getEmail().equals(email)) {
+                this.employes.set(i, updatedEmploye);
+                return;
+            }
+        }
+
+    }
+
+    public void deleteEmployee(String email) {
+        for(int i = 0; i < this.employes.size(); ++i) {
+            if (((Employe)this.employes.get(i)).getEmail().equals(email)) {
+                this.employes.remove(i);
+                return;
+            }
+        }
+
+    }
+
+    public Employe getEmployeeByEmail(String email) {
+        Iterator var3 = this.employes.iterator();
+
+        while(var3.hasNext()) {
+            Employe employe = (Employe)var3.next();
+            if (employe.getEmail().equals(email)) {
+                return employe;
+            }
+        }
+
+        return null;
+    }
+
+    public List<Employe> getAllEmployees() {
+        return new ArrayList(this.employes);
+    }
+}
+
