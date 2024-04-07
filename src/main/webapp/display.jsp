@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Liste des employés</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <!-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css"></head> --></head>
 <body>
     <h1>Liste des employés</h1>
     <table border="1">

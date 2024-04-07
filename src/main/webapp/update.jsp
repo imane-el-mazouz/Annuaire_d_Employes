@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <title>Update Employee</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css"></head> -->
+    
 </head>
 <body>
 <h1>Update Employee</h1>
 <form action="ServletTest?action=update" method="post">
-    <label for="email">Email:</label> <input type="text" id="email" name="email" value="${employeToUpdate.email}" required>
+    <label for="email">Email:</label> <input type="text" id="email" name="email" required>
     <br>
-    <label for="nom">Nom:</label> <input type="text" id="nom" name="nom" value="${employeToUpdate.nom}" required>
+    <label for="nom">Nom:</label> <input type="text" id="nom" name="nom" required>
     <br>
-    <label for="telephone">Téléphone:</label> <input type="text" id="telephone" name="telephone" value="${employeToUpdate.telephone}" required>
+    <label for="telephone">Téléphone:</label> <input type="text" id="telephone" name="telephone" required>
     <br>
-    <label for="departement">Département:</label> <input type="text" id="departement" name="departement" value="${employeToUpdate.departement}" required>
+    <label for="departement">Département:</label> <input type="text" id="departement" name="departement" required>
     <br>
-    <label for="poste">Poste:</label> <input type="text" id="poste" name="poste" value="${employeToUpdate.poste}" required>
+    <label for="poste">Poste:</label> <input type="text" id="poste" name="poste" required>
     <br>
     <input type="submit" value="Update">
 </form>

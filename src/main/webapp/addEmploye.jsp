@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un employé</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <!-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css"></head> --></head>
 <body>
 <h1>Ajouter un employé</h1>
 <form action="ServletTest?action=add" method="post">
