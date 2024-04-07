@@ -1,4 +1,4 @@
-                                                  Annuaire d'Employés avec Java EE
+                                          Annuaire d'Employés avec Java EE
 
 #Contexte du projet
 En tant que développeur Java full stack freelancer, un client souhaite une application web permettant de gérer les informations de ses employés de manière simple et efficace. L'objectif est de disposer d'un outil pratique pour ajouter, visualiser, mettre à jour et supprimer les fiches d'employés, ainsi que pour rechercher et filtrer les employés selon différents critères.
