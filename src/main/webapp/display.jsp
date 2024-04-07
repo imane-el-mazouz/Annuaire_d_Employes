@@ -1,32 +1,31 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Employee List</title>
+    <title>Liste des employés</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Employee List</h1>
-<table border="1">
-    <tr>
-        <th>nom</th>
-        <th>email</th>
-        <th>telephone</th>
-        <th>departement</th>
-        <th>poste</th>
-    </tr>
-
-    <c:forEach var="employee" items="${employeList}">
+    <h1>Liste des employés</h1>
+    <table border="1">
         <tr>
-            <td>${employee.getNom()}</td>
-            <td>${employee.getEmail()}</td>
-            <td>${employee.getTelephone()}</td>
-            <td>${employee.getDepartement()}</td>
-            <td>${employee.getPoste()}</td>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Département</th>
+            <th>Poste</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach var="employee" items="${employeList}">
+            <tr>
+                <td>${employee.nom}</td>
+                <td>${employee.email}</td>
+                <td>${employee.telephone}</td>
+                <td>${employee.departement}</td>
+                <td>${employee.poste}</td>
+            </tr>
+        </c:forEach>
+    </table>
 </body>
 </html>

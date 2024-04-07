@@ -1,17 +1,16 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Delete Employee</title>
+    <title>Supprimer un employé</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Delete Employee</h1>
-<form action="employe.html" method="post">
-    Email: <input type="text" name="email">
-    <input type="submit" value="Delete">
+<h1>Supprimer un employé</h1>
+<form action="ServletTest?action=delete" method="post">
+    <label for="email">Email:</label> <input type="text" id="email" name="email">
+    <input type="submit" value="Supprimer Employé">
 </form>
 </body>
 </html>
-
